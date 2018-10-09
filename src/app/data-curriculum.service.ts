@@ -1,0 +1,136 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DataCurriculumService {
+
+  private images = [
+        {
+            url: '../assets/Images/Certificates/angular.png',
+            name: 'Front-End Javascript Frameworks: Angular',
+            type: 'JS framework',
+            logo: 'js',
+            desc: 'Working in front-end with Angular 6. Animations, services, Http, RxJs',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/mongodb.jpg',
+            name: 'MongoDB Essentials',
+            type: 'NoSQL DBMS',
+            logo: 'mongodb',
+            desc: 'I can make secure and efficient databases with the most popular NoSQL DBMS',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/c++.jpeg',
+            name: 'C++ Tutorial Course',
+            type: 'Programming language',
+            logo: 'c++',
+            desc: 'Usage of C++ and a variaty of its tools to offer',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/chatbot.jpg',
+            name: 'Complete Facebook Messenger Chatbot Course',
+            type: 'Chatbot',
+            logo: 'chatbot',
+            desc: 'Using Chatteron\'s chatbots to enhance interactibility in messenger and websites',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/bootstrap.png',
+            name: 'Front-End Web UI Frameworks and Tools: Bootstrap 4',
+            type: 'CSS/JS framework',
+            logo: 'css',
+            desc: 'A css and js library used for making the UI with ease',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/cs.jpg',
+            name: 'C# Tutorial Course',
+            type: 'Programming language',
+            logo: 'cs',
+            desc: 'Using C# to make windows based software',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/python3.jpeg',
+            name: 'Python3 Tutorial Course',
+            type: 'Programming language',
+            logo: 'python',
+            desc: 'Scripting with python, advanced usage from web-scrapers to GUIs',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/css.jpg',
+            name: 'Css Tutorial Course',
+            type: 'Styling language',
+            logo: 'CSS',
+            desc: 'CSS used to its full advantage to style websites',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/html.jpeg',
+            name: 'HTML Tutorial Course',
+            type: 'Markup language',
+            logo: 'HTML',
+            desc: 'Using html with all of its features to make websites',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/java.jpeg',
+            name: 'Java Tutorial Course',
+            type: 'Programming language',
+            logo: 'java',
+            desc: 'Using java to make graphical user interfaces',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/javascript.jpg',
+            name: 'Javascript Tutorial Course',
+            type: 'Programming language',
+            logo: 'javascript',
+            desc: 'Using javascript to make interactive websites',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/sql.jpg',
+            name: 'SQL Tutorial Course',
+            type: 'Query language',
+            logo: 'SQL',
+            desc: 'Managing SQL to use DBMS to make use of databases',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/php.jpeg',
+            name: 'PHP Tutorial Course',
+            type: 'Programming language',
+            logo: 'PHP',
+            desc: 'Great use of PHP to make dynamic websites and develop backend',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/jquery.jpg',
+            name: 'Jquery Tutorial Course',
+            type: 'Javascript library',
+            logo: 'jquery',
+            desc: 'Jquery and its tools are available to my skillset to improve javascript',
+            likes: 0
+        },
+        {
+            url: '../assets/Images/Certificates/c.jpeg',
+            name: 'C Tutorial Course',
+            type: 'Programming language',
+            logo: 'c',
+            desc: 'I have great use of the C language to develop efficient programs',
+            likes: 0
+        },
+    ];
+
+    constructor() { }
+
+    public getImages() {
+        return this.images;
+    }
+}

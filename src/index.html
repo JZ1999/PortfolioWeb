@@ -1,14 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
+	  <base href="/"/>
   <meta charset="utf-8">
-  <title>Webpage</title>
+  <title>Joseph Zamora</title>
+  <meta http-equiv="content-language" content="en">
+  <meta charset="UTF-8"> <meta name="description" content="Portofolio of Joseph David Zamora Murillo">
+  <meta name="keywords" content="portfolio, joseph zamora, programmer">
+  <meta name="author" content="Joseph David Zamora Murillo">
+  <noscript>Your Browser does not support Javascript</noscript>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Optional theme -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+      <!-- JS dependencies -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <!-- bootbox code -->
+      <script src="./../node_modules/bootbox/bootbox.min.js"></script>
 </body>
+<!-- chatteron -->
+<script defer>
+  function loadChatWidget() {
+	chatteron.init({
+	clientID: "jqOj3WiaYBDOQoWNA1I7E",
+	title            : "Joseph Chatbot",
+	themeColor: 400
+	//openInTab: false,
+	//bubbleUrl: "http://localhost:4200/favicon.ico",
+	//width: ,
+	//height: ,
+	//displayBubble: true
+  });
+}
+</script>
+<script defer src="https://web.chatteron.io/scripts/sdk.js" onload="loadChatWidget();">
+</script>
 </html>

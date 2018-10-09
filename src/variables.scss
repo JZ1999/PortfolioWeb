@@ -1,0 +1,15 @@
+$fa-font-path : '../node_modules/font-awesome/fonts';
+$font-stack: Roboto, sans-serif;
+$background: black;
+$primary-color: #062f4f;
+$secondary-color: #813772;
+$alert-color: #b82601;
+$lesser-color: #a9a9a9;
+$text: #E8E2E2;
+
+.background{background:$background;}
+.primary-color{color:$primary-color;}
+.secondary-color{color:$secondary-color;}
+.alert-color{color:$alert-color;}
+.lesser-color{color:$lesser-color;}
+.text{color:$text;}

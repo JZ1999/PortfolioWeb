@@ -1,0 +1,47 @@
+<div class="bg-image">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <table class="table table-dark table-hover table-striped table-responsive">
+                    <thead class="thead-dark">
+                        <th *ngFor="let item of displayedColumns" scope="col"><p class="h5">{{item}}</p></th>
+                        <th scope="col"></th>
+                    </thead>
+                    <tr *ngFor="let item of dataSource">
+                        <td><p class="h6">{{item.name}}</p></td>
+                        <td><img src={{item.image}} alt={{item.name}} class="img-fluid img-thumbnail" width="130px" height="90px"/></td>
+                        <td><p class="h6">{{item.preciod}}&#162;</p></td>
+                        <td><p class="h6">{{item.precion}}&#162;</p></td>
+                        <div style="padding-top:20%"><button type="button"  class="btn btn-success" id={{item.position}} (click)="onClickClass($event)">Selecionar</button></div>
+                    </tr>
+                </table>
+            </div>
+            <div class="offset-lg-2 col-lg-3 col-md-12">
+                <form>
+                  <div class="form-group">
+                    <table class="table table-hover table-striped table-light table-bordered table-sm" style="padding-bottom: 10%">
+                        <thead>
+                            <th colspan="3"><p class="lead text-center">Classes of interest</p></th>
+                        </thead>
+                        <tr *ngFor="let item of interestedClasses">
+                            <td>{{item.name}}</td>
+                            <td><img src={{item.image}} alt={{item.name}} class="img-fluid rounded" width="100px" height="60px"/></td>
+                            <td><button id="{{item.position}}" (click)="onClickRemove($event)" type="button" class="btn btn-primary btn-sm">Remove </button></td>
+                        </tr> 
+                    </table>
+                  </div>
+                  <div class="form-group">
+                      <label for="numero"><p class="h5">Cellphone Number</p></label>
+                    <input type="number" class="form-control" id="numero" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label for="msg"><p class="h5">Message</p></label>
+                    <textarea class="form-control" id="msg" rows="3" cols="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-warning btn-lg">Listo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

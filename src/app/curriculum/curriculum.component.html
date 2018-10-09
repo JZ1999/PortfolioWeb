@@ -1,0 +1,63 @@
+<div class="bg-image">
+    <div class="container-fluid d-one -md-block">
+
+    <ul>
+        <!--<li>
+
+            <div class="">
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar class=""></div>
+                        <mat-card-title>Curriculum</mat-card-title>
+                        <mat-card-subtitle>CV</mat-card-subtitle>
+                    </mat-card-header>
+                    <div class="d-none d-md-block"><iframe src="../../assets/PDF/test.pdf" style="width:100%; height:480px" frameborder="0"></iframe></div>
+                    <div class="d-md-noe"><object data="../../assets/PDF/test.pdf" type="application/pdf" >
+                        <embed src="../../assets/PDF/test.pdf" type="application/pdf" />
+                    </object></div>
+                  <mat-card-actions>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary"><p class="h6">LIKE</p></button>
+                        <button type="button" class="btn btn-warning"><p class="h6">SHARE</p></button>
+                        <button type="button" class="btn btn-success"><p class="h6">DOWNLOAD</p></button>
+                    </div>
+                  </mat-card-actions>
+                </mat-card>
+                </div>
+        </li>-->
+        <li *ngFor="let cert of certificates">
+            <div class="ow jstify-content-center" style="margin:1%">
+                <div class="offset-md-2 offset-0 ">
+                  <mat-card class="cert-card">
+                  <mat-card-header>
+                      <div mat-card-avatar class="cert-image-header-{{cert.logo}}"></div>
+                    <mat-card-title>{{cert.name}}</mat-card-title>
+                    <mat-card-subtitle>{{cert.type}}</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="{{cert.url}}" width="580px" height="430px" alt="{{cert.name}}">
+                  <mat-card-content>
+                      <div class="lead h2">
+                        <i class="far fa-thumbs-up" ></i>
+                        <div class="lead" style="display:inline"> {{cert.likes}}</div>
+                        <br>
+                        <hr style="color:white">
+                      </div>
+                      <div class="lead h2" align="center">
+                          <p>
+                            {{cert.desc}}
+                          </p>
+                      </div>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <div class="btn-group">
+                        <button id="{{cert.logo}}"  type="button" (click)="putLike($event)" class="btn btn-primary"><p id="{{cert.logo}}" class="h6">LIKE</p></button>
+                        <button type="button" class="btn btn-warning"><p class="h6">SHARE</p></button> 
+                    </div>
+                 </mat-card-actions>
+                </mat-card>
+                </div>
+            </div>
+        </li>
+    </ul>
+    </div>
+</div>
