@@ -1,5 +1,5 @@
 <mat-toolbar fxLayout="row" >
-    <div fxFlex="90" ><i class="fa fa-cogs"></i><span> Joseph Zamora</span></div>
+    <div fxFlex="90" ><i class="fa fa-cogs"></i><a routerLink="/" style="text-decoration:none;color:white"> Joseph Zamora</a></div>
     <div fxFlex dir="rtl" class="h1">
 
         <button mat-button [matMenuTriggerFor]="menu" class="h1">
@@ -15,7 +15,7 @@
           <button mat-menu-item>About Me</button>
         </mat-menu>
 
-        <mat-toolbar fxHide.xs="true">
+        <mat-toolbar fxHide.xs="true"fxHide.sm="true">
             <button mat-button routerLink="/"><i class="fas fa-home"></i> Home</button>
             <button mat-button routerLink="/contact"><i class="fas fa-address-card"></i> Contact</button>
             <button mat-button routerLink="/curriculum"><i class="fas fa-certificate"></i> Certificates/Degrees</button>

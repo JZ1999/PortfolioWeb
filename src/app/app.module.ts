@@ -1,23 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppComponent } from './app.component';
-import { IntroComponent } from './intro/intro.component';
-import { FooterComponent } from './footer/footer.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { ContactComponent } from './contact/contact.component';
-import { CurriculumComponent } from './curriculum/curriculum.component';
-import { ClassesComponent } from './classes/classes.component';
-import { BlogComponent } from './blog/blog.component';
-import { AboutComponent } from './about/about.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppComponent } from "./app.component";
+import { IntroComponent } from "./intro/intro.component";
+import { FooterComponent } from "./footer/footer.component";
+import { NavigationComponent } from "./navigation/navigation.component";
+import { ContactComponent } from "./contact/contact.component";
+import { CurriculumComponent } from "./curriculum/curriculum.component";
+import { ClassesComponent } from "./classes/classes.component";
+import { BlogComponent } from "./blog/blog.component";
+import { AboutComponent } from "./about/about.component";
+import { AppRoutingModule } from ".//app-routing.module";
 
-import 'hammerjs';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import "hammerjs";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 
 import {
-  MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
   MatButtonModule,
@@ -46,13 +46,15 @@ import {
   MatSlideToggleModule,
   MatSnackBarModule,
   MatSortModule,
-  MatStepperModule, MatTableModule,
+  MatStepperModule,
+  MatTableModule,
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-  MatTreeModule,
-} from '@angular/material';
+  MatTreeModule
+} from "@angular/material";
 
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +68,8 @@ import {
     AboutComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     BrowserModule,
     FlexLayoutModule,
@@ -109,4 +113,4 @@ import {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

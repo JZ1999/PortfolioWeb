@@ -12,7 +12,7 @@
                         <td><img src={{item.image}} alt={{item.name}} class="img-fluid img-thumbnail" width="130px" height="90px"/></td>
                         <td><p class="h6">{{item.preciod}}&#162;</p></td>
                         <td><p class="h6">{{item.precion}}&#162;</p></td>
-                        <div style="padding-top:20%"><button type="button"  class="btn btn-success" id={{item.position}} (click)="onClickClass($event)">Selecionar</button></div>
+                        <div style="padding-top:20%"><button type="button"  class="btn btn-success" id={{item.position}} (click)="onClickClass($event)">Select</button></div>
                     </tr>
                 </table>
             </div>
@@ -25,7 +25,9 @@
                         </thead>
                         <tr *ngFor="let item of interestedClasses">
                             <td>{{item.name}}</td>
-                            <td><img src={{item.image}} alt={{item.name}} class="img-fluid rounded" width="100px" height="60px"/></td>
+                            <div class="d-none">
+                                <td><img src={{item.image}} alt={{item.name}} class="img-fluid rounded" width="100px" height="60px"/></td>
+                            </div>
                             <td><button id="{{item.position}}" (click)="onClickRemove($event)" type="button" class="btn btn-primary btn-sm">Remove </button></td>
                         </tr> 
                     </table>
@@ -34,11 +36,24 @@
                       <label for="numero"><p class="h5">Cellphone Number</p></label>
                     <input type="number" class="form-control" id="numero" placeholder="">
                   </div>
+                    <hr>
                   <div class="form-group">
                     <label for="msg"><p class="h5">Message</p></label>
                     <textarea class="form-control" id="msg" rows="3" cols="3"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-warning btn-lg">Listo</button>
+                    <hr>
+                  <div class="form-group">
+                    <label for="msg"><p class="h5">Choose a date</p></label>
+                    <mat-form-field style="width:100%">
+                          <input matInput [matDatepicker]="picker" placeholder="Choose a date for the classes">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                              <mat-datepicker touchUi #picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                  <div class="btn-group">
+                    <button type="submit" class="btn btn-success btn-lg">Ready</button>
+                    <button type="reset" class="btn btn-warning btn-lg" (click)="clear()">Clear</button>
+                  </div>
                 </form>
             </div>
         </div>

@@ -52,7 +52,7 @@ const CLASSESCONST: ClassInfo[] = [
 export class ClassesComponent implements OnInit {
   interestedClasses: Set<ClassInfo>;
   dataSource = CLASSESCONST;
-  displayedColumns = ["Name", "Image", "Classes at home", "Normal classes"];
+  displayedColumns = ["Name", "", "Classes at home", "Normal classes"];
   expandedElement: ClassInfo;
 
   onClickClass(e) {
@@ -67,6 +67,10 @@ export class ClassesComponent implements OnInit {
     this.isInArray(obj)
       ? this.interestedClasses.delete(obj)
       : this.appAlert(obj, "r");
+  }
+
+  clear() {
+    this.interestedClasses = new Set([]);
   }
 
   appAlert(obj, type) {
