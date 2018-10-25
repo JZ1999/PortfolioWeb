@@ -12,6 +12,66 @@
   background-image: url("./assets/Images/background.jpg");
 }
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.line-1 {
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.line-2 {
+  width: 12em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 140%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter2 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 16em;
+  }
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.intro {
+  background-color: rgba(#f1f1f1, 0.7);
+  width: 60%;
+}
+
 footer {
   bottom: 0;
   color: #707070;
@@ -21,6 +81,26 @@ footer {
   font-size: small;
   width: 100%;
   padding: 1em 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5555ff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: blue;
 }
 
 nav .active {
@@ -62,4 +142,10 @@ body {
   background-color: $secondary-color;
   opacity: 0.7;
   font: $font-stack;
+}
+
+.footer-text {
+  text-align: center;
+  font: 0.7em $font-stack;
+  color: $lesser-color;
 }
