@@ -92,7 +92,6 @@ export class ClassesComponent implements OnInit {
       });
     }
   }
-
   isInArray(obj): Boolean {
     return this.interestedClasses.has(obj);
   }

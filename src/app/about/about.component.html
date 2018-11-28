@@ -1,3 +1,38 @@
-<p>
-  about works!
-</p>
+<!--<embed src=”” width=”600″ height=”500″ alt=”pdf” pluginspage=”http://www.adobe.com/products/acrobat/readstep2.html”>-->
+<div class="container">
+    <div class="row justify-content-md-center margin-auto">
+        <mat-chip-list>
+            <mat-chip color="accent" selected (click)="cv()">Curriculum Vitae</mat-chip>
+            <mat-chip color="primary" selected (click)="about()">About Webpage</mat-chip>
+        </mat-chip-list>
+    </div>
+</div>
+<div class="container CV" id="CV">
+    <div class="row justify-content-center ">
+
+        <object data="assets/PDF/CV.pdf#view=FitH" width="775" height="600"type="application/pdf" >
+              <p class="jumbotron">Your web browser doesn't have a PDF plugin.
+                Instead you can <a href="assets/PDF/CV.pdf#view=FitH">click here to
+                      download the PDF file.</a></p>
+        </object>'
+
+    </div>
+</div>
+<div class="container about jumbotron" id="about">
+    <div class="row justify-content-center">
+        <p class="h4" style="display:block">
+            This webpage was made using the following:<br>
+        </p>
+    </div>
+    <div class="row justify-content-center">
+        <ul class="list-group" style="display:block">
+            <li class="list-group-item" onclick="window.location='http://angular.io'"> Angular 6 <span class="badge badge-primary">Check Out</span></li>
+            <li class="list-group-item" onclick="window.location='http://www.djangoproject.com'"> Django <span class="badge badge-primary">Check Out</span></li>
+            <li class="list-group-item" onclick="window.location='http://bootboxjs.com'"> Bootbox <span class="badge badge-primary">Check Out</span></li>
+            <li class="list-group-item" onclick="window.location='http://material.angular.io'"> Bootstrap <span class="badge badge-primary">Check Out</span></li>
+            <li class="list-group-item" onclick="window.location='http://getbootstrap.com'"> Angular Material <span class="badge badge-primary">Check Out</span></li>
+            <li class="list-group-item" onclick="window.location='http://nodejs.org'"> Nodejs <span class="badge badge-primary">Check Out</span></li>
+
+        </ul>
+    <div>
+</div>
