@@ -55,7 +55,7 @@ import {
 } from "@angular/material";
 
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { ProjectsComponent } from './projects/projects.component';
+import { ProjectsComponent } from "./projects/projects.component";
 @NgModule({
   declarations: [
     AppComponent,

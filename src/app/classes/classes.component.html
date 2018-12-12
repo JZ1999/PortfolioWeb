@@ -9,7 +9,7 @@
                     </thead>
                     <tr *ngFor="let item of dataSource">
                         <td><p class="h6">{{item.name}}</p></td>
-                        <td><img src={{item.image}} alt={{item.name}} class="img-fluid img-thumbnail" width="130px" height="90px"/></td>
+                        <td><img src={{item.image}} alt={{item.name}} class="d-none d-sm-block img-fluid img-thumbnail" width="130px" height="90px"/></td>
                         <td><p class="h6">{{item.preciod}}&#162;</p></td>
                         <td><p class="h6">{{item.precion}}&#162;</p></td>
                         <div style="padding-top:20%"><button type="button"  class="btn btn-success" id={{item.position}} (click)="onClickClass($event)">Select</button></div>
@@ -25,7 +25,7 @@
                         </thead>
                         <tr *ngFor="let item of interestedClasses">
                             <td>{{item.name}}</td>
-                            <div class="d-none">
+                            <div class="">
                                 <td><img src={{item.image}} alt={{item.name}} class="img-fluid rounded" width="100px" height="60px"/></td>
                             </div>
                             <td><button id="{{item.position}}" (click)="onClickRemove($event)" type="button" class="btn btn-primary btn-sm">Remove </button></td>
@@ -33,8 +33,10 @@
                     </table>
                   </div>
                   <div class="form-group">
-                      <label for="numero"><p class="h5">Cellphone Number</p></label>
-                    <input type="number" class="form-control" id="numero" placeholder="">
+                      <label for="numero"><p class="h5">Cellphone Number</p></label><br>
+                      <input class="input-phone" type="tel" size="4" value="+506" readonly/>
+                      <input class="input-phone" type="tel" size="8" maxlength="8"/>
+                      <!--<input type="number" class="form-control" id="numero" placeholder="">-->
                   </div>
                     <hr>
                   <div class="form-group">
