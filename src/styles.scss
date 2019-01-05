@@ -8,6 +8,10 @@
   font: $font-stack;
 }
 
+a[title="Hosted on free web hosting 000webhost.com. Host your own website for FREE."] {
+  display: none;
+}
+
 .bg-image {
   background-image: url("./assets/Images/background.jpg");
 }
@@ -142,6 +146,12 @@ body {
   background-color: $secondary-color;
   opacity: 0.7;
   font: $font-stack;
+}
+
+.footer-text {
+  text-align: center;
+  font: 0.7em $font-stack;
+  color: $lesser-color;
 }
 
 .footer-text {

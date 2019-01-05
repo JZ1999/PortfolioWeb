@@ -10,13 +10,11 @@ export class ProjectsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    if (window.innerWidth <= 800 && window.innerHeight <= 700) {
-      this.isMobile = true;
-    } else {
-      this.isMobile = false;
-    }
-    console.log(window.innerWidth <= 800 && window.innerHeight <= 700);
+    this.isMobile = window.innerWidth <= 800 && window.innerHeight <= 700;
+    this.changeAllIMGToGray();
+  }
 
+  private changeAllIMGToGray() {
     try {
       if (!this.isMobile) {
         let obj = document.getElementsByClassName("image") as HTMLCollectionOf<
@@ -30,18 +28,34 @@ export class ProjectsComponent implements OnInit {
   }
 
   public hoverIMG(element) {
-    let Img = element.srcElement.children[0];
-    try {
-      if (Img.localName == "img" && !this.isMobile) {
-        Img.style.webkitFilter = "grayscale(0%)";
+    if (element.srcElement.localName != "li") {
+      element = element.srcElement.parentNode;
+      if (element.localName != "li") {
+        element = element.parentNode.parentNode;
       }
-    } catch (e) {}
+      var Img = element.children[0];
+    } else {
+      Img = element.srcElement.children[0];
+    }
+    this.changeGrayScale(0, Img);
   }
+
   public hoverIMGoff(element) {
-    let Img = element.srcElement.children[0];
+    if (element.srcElement.localName != "li") {
+      element = element.srcElement.parentNode.parentNode;
+      if (element.localName != "li") {
+        element = element.parentNode;
+      }
+      var Img = element.children[0];
+    } else {
+      Img = element.srcElement.children[0];
+    }
+    this.changeGrayScale(100, Img);
+  }
+  private changeGrayScale(amount: number, Img: HTMLElement) {
     try {
       if (Img.localName == "img" && !this.isMobile) {
-        Img.style.webkitFilter = "grayscale(100%)";
+        Img.style.webkitFilter = "grayscale(" + amount + "%)";
       }
     } catch (e) {}
   }

@@ -23,6 +23,15 @@ export class DataCurriculumService {
       likes: 0
     },
     {
+      url: "../assets/Images/Certificates/sololearn.jpeg",
+      name: "Top 4 in Costa Rica in Sololearn",
+      type: "Achievement",
+      logo: "sololearn",
+      desc:
+        "Top 4 in Costa Rica in the Sololearn app. Sololearn is an educational app about programming and software development",
+      likes: 0
+    },
+    {
       url: "../assets/Images/Certificates/c++.jpeg",
       name: "C++ Tutorial Course",
       type: "Programming language",

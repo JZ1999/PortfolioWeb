@@ -16,6 +16,9 @@ import "hammerjs";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { ContactConnectionService } from "./contact-connection.service";
+import { HttpClientModule } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 import {
   MatBadgeModule,
@@ -70,6 +73,7 @@ import { ProjectsComponent } from "./projects/projects.component";
     ProjectsComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -112,7 +116,7 @@ import { ProjectsComponent } from "./projects/projects.component";
     MatTreeModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ContactConnectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

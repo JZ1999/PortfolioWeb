@@ -1,71 +1,77 @@
 <div class="bg-image">
-<div class="container " style="color: white;" 
-    fxLayout="row wrap" 
-    fxLayout.lt-md="column" 
-    fxLayoutAlign="center center" 
-    fxLayoutGap="10px">
 
-  <div fxFlex="500" fxFlex.gt-sm="50">
-    <div fxLayout="row">
-      <div fxFlex="">
-        <address class="h6">
-          Freelancer: <a href="https://www.freelancer.com/u/josephzamora64">www.freelancer.com/u/josephzamora64</a><br>
-          <i class="fa fa-phone"></i>: +506 8459 9023<br>
-          <i class="fa fa-envelope"></i>:
-          <a href="mailto:joseph.zamora64@yahoo.com">joseph.zamora64@yahoo.com</a>
-        </address>
+<div class="container ">
+    <div class="justify-content-center align-items-center row">
+    <!-- Default form contact -->
+    <form class="jumbotron text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+      <p class="h4 mb-4">Contact me</p>
+
+      <!-- Name -->
+      <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInputDirective
+        class="form-control mb-4" placeholder="Name">
+
+      <!-- Email -->
+      <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInputDirective
+        class="form-control mb-4" placeholder="E-mail">
+
+      <!-- Subject -->
+      <label>Subject</label>
+      <select formControlName="contactFormSubjects" class="browser-default custom-select mb-4">
+        <option value="" disabled>Choose option</option>
+        <option value="1" selected>Feedback</option>
+        <option value="2">Report a bug</option>
+        <option value="3">Freelance</option>
+        <option value="4">Misclellaneous</option>
+      </select>
+
+      <!-- Message -->
+      <div class="form-group">
+        <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInputDirective id="exampleFormControlTextarea2"
+          rows="3" placeholder="Message"></textarea>
+      </div>
+
+      <!-- Copy -->
+      <div class="custom-control custom-checkbox mb-4">
+        <input formControlName="contactFormCopy" type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+        <label class="custom-control-label" for="defaultContactFormCopy">Send me a copy of this message</label>
+      </div>
+
+      <!-- Send button -->
+      <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+        mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Send</button>
+
+    </form>
+    <!-- Default form contact -->
+</div>
+</div>
+
+
+    <div class="container " style="color: white;" 
+        fxLayout="row wrap" 
+        fxLayout.lt-md="column" 
+        fxLayoutAlign="center center" 
+        fxLayoutGap="10px">
+
+      <div fxFlex="500" fxFlex.gt-sm="50">
+        <div fxLayout="row">
+          <div fxFlex="">
+            <address class="h6">
+              Freelancer: <a href="https://www.freelancer.com/u/josephzamora64">www.freelancer.com/u/josephzamora64</a><br>
+              Sololearn: <a href="https://www.sololearn.com/Profile/4949578">http://www.sololearn.com/Profile/4949578</a><br>
+              <i class="fa fa-phone"></i>: +506 8459 9023<br>
+              <i class="fa fa-envelope"></i>:
+              <a href="mailto:joseph.zamora64@yahoo.com">joseph.zamora64@yahoo.com</a>
+            </address>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="500" fxFlex.gt-sm="45">
+        <div class="h6" style="text-align:center">
+          <a mat-icon-button class="btn-facebook" target="_blank"href="https://www.facebook.com/joseph.zamora.925"><i class="fab fa-facebook-f fa-lg"></i></a>
+          <a mat-icon-button class="btn-linkedin" target="_blank"href="https://www.linkedin.com/in/joseph-david-zamora-murillo-3645a7148/"><i class="fab fa-linkedin-in fa-lg"></i></a>
+          <a mat-icon-button class="btn-mail" href="mailto:joseph.zamora64@yahoo.com" style="margin-bottom:5%"><i class="fas fa-envelope fa-lg"></i></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div fxFlex="500" fxFlex.gt-sm="45">
-    <div class="h6" style="text-align:center">
-      <a mat-icon-button class="btn-facebook" target="_blank"href="https://www.facebook.com/joseph.zamora.925"><i class="fab fa-facebook-f fa-lg"></i></a>
-      <a mat-icon-button class="btn-linkedin" target="_blank"href="https://www.linkedin.com/in/joseph-david-zamora-murillo-3645a7148/"><i class="fab fa-linkedin-in fa-lg"></i></a>
-      <a mat-icon-button class="btn-mail" href="mailto:joseph.zamora64@yahoo.com" style="margin-bottom:5%"><i class="fas fa-envelope fa-lg"></i></a>
-    </div>
-  </div>
-  <div fxLayout="row">
-			<form action="/sendEmail.php" method="post">
-                <legend>Send an e-mail. All fields with an asterisk ( '*') are required.</legend>
-			<div class="form-group">
-				<label  for="contact_name" class="required col-sm-2 control-label">Name <span class="star">&nbsp;*</span></label>
-				<div class="col-sm-10">
-					<input type="text" name="contact_name"  value="" class="required form-control" size="30" required="required" >
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="contact_email" class="required col-sm-2 control-label">
-	Email </label>
-				<div class="col-sm-10">
-					<input type="email" name="contact_email" class="validate-email required form-control"  value="" size="30" autocomplete="email" required="required">				</div>
-			</div>
-			<div class="form-group">
-				<label  for="contact_emailmsg" class="required col-sm-2 control-label">Subject <span class="star">&nbsp;*</span></label>
-				<div class="col-sm-10">
-					<input type="text" name="contact_subject" class="required form-control" size="60" required="required" >
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="contact_message" class="required col-sm-2 control-label">
-	Message <span class="star">&nbsp;*</span></label>
-				<div class="col-sm-10">
-					<textarea name="contact_message" cols="50" rows="10" class="required form-control" required="required" ></textarea>				</div>
-			</div>
-							<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-						<div class="checkbox">
-							<input type="checkbox" name="contact_email_copy" value="1">							<label for="contact_email_copy">
-	Send me a copy</label>
-						</div>
-					</div>
-				</div>
-            <div class="form-group">
-                <div class="btn-group" role="group">
-					<button class="btn btn-success validate" type="submit">Submit</button>
-					<button class="btn btn-warning validate" type="reset">Reset</button>
-                </div>
-			</div>
-           </form>
-  </div>
-</div>
 </div>
