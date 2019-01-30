@@ -103,5 +103,21 @@ export class ClassesComponent implements OnInit {
   constructor() {}
   ngOnInit() {
     this.interestedClasses = new Set([]);
+
+    // @ts-ignore
+    let initMsg = bootbox.dialog({
+      title: "Welcome to my classes page",
+      message:
+        "<p>Here you can view, select and gain information on my classes</p>"
+    });
+
+    //  initMsg.init(function() {
+    //    setTimeout(function() {
+    //      // @ts-ignore
+    //      dialog
+    //        .find(".bootbox-body")
+    //        .html("I was loaded after the dialog was shown!");
+    //    }, 3000);
+    //  });
   }
 }

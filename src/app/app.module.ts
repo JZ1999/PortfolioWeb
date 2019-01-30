@@ -20,6 +20,8 @@ import { ContactConnectionService } from "./contact-connection.service";
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
+import { PdfViewerModule } from "ng2-pdf-viewer";
+
 import {
   MatBadgeModule,
   MatBottomSheetModule,
@@ -73,6 +75,7 @@ import { ProjectsComponent } from "./projects/projects.component";
     ProjectsComponent
   ],
   imports: [
+    PdfViewerModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
